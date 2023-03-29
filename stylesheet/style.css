@@ -11,6 +11,7 @@ body {
     --text-font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
      'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
      --svg-color-change: invert(100%) sepia(0%) saturate(3977%) hue-rotate(307deg) brightness(129%) contrast(110%);
+     --svg-color-hover-change: invert(90%) sepia(13%) saturate(1350%) hue-rotate(59deg) brightness(97%) contrast(91%);
      background-color: var(--main-body-color, lightgray);
 }
 
@@ -26,6 +27,16 @@ body {
     grid-column: 1;
     grid-row: 1 / 3;
     background-color: var(--sidebar-color, blue);
+}
+
+.icons:hover {
+    color: lightgreen;
+    cursor: pointer;
+}
+
+.svg:hover {
+    filter: var(--svg-color-hover-change, lightgreen);
+    cursor: pointer;
 }
 
 .sidebar-element-container {
@@ -56,10 +67,10 @@ body {
     filter: var(--svg-color-change, white);
 }
 
-.dashboard {
-    font-size: 1em;
+.chang {
+    font-size: 1.2em;
     font-weight: bold;
-    letter-spacing: 2px;
+    letter-spacing: 4px;
 }
 
 .mid-sidebar-element {
