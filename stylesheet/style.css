@@ -1,64 +1,113 @@
 * {
     margin: 0;
     padding: 0;
-    border: 1px dashed red;
+    /*border: 1px dashed red; */
+    font-family: var(--text-font-family, sans-serif);
+}
+
+body {
+    --sidebar-color: #2F2F2F;
+    --main-body-color: #FAFAFA;
+    --text-font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+     'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+     --svg-color-change: invert(100%) sepia(0%) saturate(3977%) hue-rotate(307deg) brightness(129%) contrast(110%);
+     background-color: var(--main-body-color, lightgray);
 }
 
 .container {
     height: 100vh;
     display: grid;
     grid-template-columns: .75fr 3.5fr;
-    grid-template-rows: 1fr 3.5fr;
+    grid-template-rows: 1fr 3fr;
+
 }
 
 .sidebar {
     grid-column: 1;
     grid-row: 1 / 3;
-    background-color: aqua;
+    background-color: var(--sidebar-color, blue);
 }
 
 .sidebar-element-container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 3fr 2fr;
+    grid-template-rows: 1fr 4fr 2fr;
     gap: 20px;
     width: 100%;
-    height: 450px;
-    border: 1px solid black;
+    height: 550px;
+}
+
+.sidebar-element-container p {
+    color: white;
 }
 
 .top-sidebar-element {
     height: 1fr;
     width: 1fr;
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 3fr;
+    align-items: center;
+}
+
+.top-sidebar-element img {
+    width: 32px;
+    height: 32px;
+    justify-self: center;
+    filter: var(--svg-color-change, white);
+}
+
+.dashboard {
+    font-size: 1em;
+    font-weight: bold;
+    letter-spacing: 2px;
 }
 
 .mid-sidebar-element {
     height: 1fr;
     width: 1fr;
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 3fr;
     grid-template-rows: repeat(6, 1fr);
+    align-items: center;
+    font-size: .8em;
+    letter-spacing: 2px;
+}
+
+.mid-sidebar-element img {
+    width: 20px;
+    height: 20px;
+    justify-self: center;
+    filter: var(--svg-color-change, white);
 }
 
 .bottom-sidebar-element {
     height: 1fr;
     width: 1fr;
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 3fr;
     grid-template-rows: repeat(3, 1fr);
+    align-items: center;
+    font-size: .8em;
+    letter-spacing: 2px;
+}
+
+.bottom-sidebar-element img {
+    width: 20px;
+    height: 20px;
+    justify-self: center;
+    filter: var(--svg-color-change, white);
 }
 
 .header {
     grid-column: 2;
     grid-row: 1;
-    background-color: yellow;
+    background-color: white;
+    box-shadow: 10px 2px 20px #d3d3d3;
+    margin-bottom: 10px;
 }
 
 .main-body {
+    height: 100%;
     grid-column: 2;
-    grid-row: 2;
-    background-color: bisque;
 
 }
