@@ -6,6 +6,7 @@
 }
 
 body {
+    position: relative;
     --sidebar-color: #202020;
     --main-body-color: lightgray;
     --text-font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
@@ -27,16 +28,27 @@ body {
 
 }
 
+
 .sidebar {
+    position: relative;
+    display: flex;
+    position: relative;
+    top: 0;
     grid-column: 1;
     grid-row: 1 / 3;
-    background-color: var(--sidebar-color, blue);
+}
+
+.img-background {
+    position: relative;
+    width: 100%;
+    height: 100%;
 }
 
 .icons:hover {
-    color: lightgreen;
+    color: var(--button-color, lightgreen);
     cursor: pointer;
-    transform: scale(1.03);
+    transform: scale(1.05);
+    font-weight: bold;
 }
 
 .svg:hover {
@@ -45,12 +57,16 @@ body {
 }
 
 .sidebar-element-container {
+    position: absolute;
+    top: 0;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 4fr 2fr;
+    grid-template-rows: 100px 300px 150px;
     gap: 20px;
     width: 100%;
-    height: 550px;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    overflow: hidden;
 }
 
 .sidebar-element-container p {
@@ -73,9 +89,9 @@ body {
 }
 
 .chang {
-    font-size: 1.2em;
+    font-size: 1.4em;
     font-weight: bold;
-    letter-spacing: .6em;
+    letter-spacing: .8em;
 }
 
 .mid-sidebar-element {
@@ -105,6 +121,7 @@ body {
     align-items: center;
     font-size: .8em;
     letter-spacing: 2px;
+    margin-bottom: 0px;
 }
 
 .bottom-sidebar-element img {
